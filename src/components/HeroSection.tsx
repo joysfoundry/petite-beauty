@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="space-y-8 animate-fade-up">
           <div className="space-y-4">
             <p className="font-sans text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              Pouch-ception · Curated Kit Bags
+              Pouch-ception · Curated Mini Kits
             </p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
               Your Beauty,
@@ -18,7 +18,8 @@ const HeroSection = () => {
               <span className="text-rose italic">Mini'd</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-md font-sans leading-relaxed">
-              Try before you buy. Take it everywhere. Mini and travel-size beauty from top brands—including luxury names like Dior, YSL, Charlotte Tilbury, and Sol de Janeiro.
+              Try before you buy. Take it everywhere. Mini and travel-size beauty from top brands—including luxury names
+              like Dior, YSL, Charlotte Tilbury, and Sol de Janeiro.
             </p>
             <p className="font-sans text-xs tracking-[0.18em] uppercase text-rose">
               Launching soon · Join the waitlist
@@ -28,12 +29,7 @@ const HeroSection = () => {
             <Button variant="hero" size="lg" className="px-10 py-6" onClick={() => open("hero_shop_minis")}>
               Shop Minis
             </Button>
-            <Button
-              variant="hero-outline"
-              size="lg"
-              className="px-10 py-6"
-              onClick={() => open("hero_build_bag")}
-            >
+            <Button variant="hero-outline" size="lg" className="px-10 py-6" onClick={() => open("hero_build_bag")}>
               Build Your Mini Bag
             </Button>
           </div>
