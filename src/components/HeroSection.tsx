@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="space-y-8 animate-fade-up">
           <div className="space-y-4">
             <p className="font-sans text-sm tracking-[0.2em] uppercase text-muted-foreground">
-              Discover · Try · Love
+              Pouch-ception · Curated Kit Bags
             </p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
               Try Before
@@ -20,7 +20,8 @@ const HeroSection = () => {
               <span className="text-rose italic">Beauty</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-md font-sans leading-relaxed">
-              Discover mini and travel-size beauty products from top brands—all in one place.
+              Mini designer bags paired with travel-size beauty minis from Dior, YSL, Rare Beauty,
+              Sol de Janeiro, Charlotte Tilbury, Glossier and more—all in one curated kit.
             </p>
             <p className="font-sans text-xs tracking-[0.18em] uppercase text-rose">
               Launching soon · Join the waitlist
