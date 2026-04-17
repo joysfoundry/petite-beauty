@@ -8,11 +8,13 @@ export const trackClick = async (
   metadata?: Record<string, unknown>
 ) => {
   try {
-    await supabase.from("click_events").insert({
-      event_type: eventType,
-      item_name: itemName,
-      metadata: metadata ?? null,
-    });
+    await supabase.from("click_events").insert([
+      {
+        event_type: eventType,
+        item_name: itemName,
+        metadata: (metadata ?? null) as never,
+      },
+    ]);
   } catch (err) {
     // Silent fail — analytics shouldn't block UX
     console.warn("trackClick failed", err);
