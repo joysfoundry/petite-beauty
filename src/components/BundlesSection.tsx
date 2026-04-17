@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useWaitlist } from "@/components/WaitlistDialog";
 
 const bundles = [
   {
@@ -45,6 +46,7 @@ const bundles = [
 ];
 
 const BundlesSection = () => {
+  const { open } = useWaitlist();
   return (
     <section id="bundles" className="py-24 bg-warm">
       <div className="container mx-auto px-6">
@@ -93,8 +95,13 @@ const BundlesSection = () => {
                     {bundle.originalPrice}
                   </span>
                 </div>
-                <Button variant="hero" size="sm" className="px-6">
-                  Add to Bag
+                <Button
+                  variant="hero"
+                  size="sm"
+                  className="px-6"
+                  onClick={() => open(`bundle_${bundle.name}`)}
+                >
+                  Notify Me
                 </Button>
               </div>
             </div>

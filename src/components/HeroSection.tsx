@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-flatlay.jpg";
+import { useWaitlist } from "@/components/WaitlistDialog";
 
 const HeroSection = () => {
+  const { open } = useWaitlist();
   return (
     <section className="relative min-h-screen flex items-center pt-16">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -20,12 +22,20 @@ const HeroSection = () => {
             <p className="text-lg text-muted-foreground max-w-md font-sans leading-relaxed">
               Discover mini and travel-size beauty products from top brands—all in one place.
             </p>
+            <p className="font-sans text-xs tracking-[0.18em] uppercase text-rose">
+              Launching soon · Join the waitlist
+            </p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button variant="hero" size="lg" className="px-10 py-6">
+            <Button variant="hero" size="lg" className="px-10 py-6" onClick={() => open("hero_shop_minis")}>
               Shop Minis
             </Button>
-            <Button variant="hero-outline" size="lg" className="px-10 py-6">
+            <Button
+              variant="hero-outline"
+              size="lg"
+              className="px-10 py-6"
+              onClick={() => open("hero_build_bag")}
+            >
               Build Your Mini Bag
             </Button>
           </div>
@@ -38,7 +48,7 @@ const HeroSection = () => {
           <div className="rounded-2xl overflow-hidden shadow-2xl shadow-rose/10">
             <img
               src={heroImage}
-              alt="Luxury mini beauty products in a pink velvet pouch"
+              alt="Mini beauty products in a blush velvet pouch beside a quilted mini designer handbag"
               width={1280}
               height={720}
               className="w-full h-auto object-cover"

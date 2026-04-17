@@ -8,21 +8,24 @@ import BrandsSection from "@/components/BrandsSection";
 import BrandPartnerSection from "@/components/BrandPartnerSection";
 import EmailCaptureSection from "@/components/EmailCaptureSection";
 import Footer from "@/components/Footer";
+import { WaitlistProvider } from "@/components/WaitlistDialog";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <HeroSection />
-      <WhyPetiteSection />
-      <CategoriesSection />
-      <BundlesSection />
-      <BuildBagSection />
-      <BrandsSection />
-      <BrandPartnerSection />
-      <EmailCaptureSection />
-      <Footer />
-    </div>
+    <WaitlistProvider>
+      <div className="min-h-screen">
+        <Navbar />
+        <HeroSection />
+        <WhyPetiteSection />
+        <CategoriesSection />
+        <BundlesSection />
+        <BuildBagSection />
+        <BrandsSection />
+        <BrandPartnerSection />
+        <EmailCaptureSection />
+        <Footer />
+      </div>
+    </WaitlistProvider>
   );
 };
 
