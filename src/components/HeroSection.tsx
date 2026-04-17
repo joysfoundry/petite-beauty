@@ -20,8 +20,7 @@ const HeroSection = () => {
               <span className="text-rose italic">Beauty</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-md font-sans leading-relaxed">
-              Mini designer bags paired with travel-size beauty minis from Dior, YSL, Rare Beauty,
-              Sol de Janeiro, Charlotte Tilbury, Glossier and more—all in one curated kit.
+              Discover mini and travel-size beauty products from top brands—all in one place.
             </p>
             <p className="font-sans text-xs tracking-[0.18em] uppercase text-rose">
               Launching soon · Join the waitlist
