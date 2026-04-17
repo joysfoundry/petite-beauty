@@ -13,14 +13,12 @@ const HeroSection = () => {
               Pouch-ception · Curated Kit Bags
             </p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
-              Try Before
+              Your Beauty,
               <br />
-              You Buy
-              <br />
-              <span className="text-rose italic">Beauty</span>
+              <span className="text-rose italic">Mini'd</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-md font-sans leading-relaxed">
-              Discover mini and travel-size beauty products from top brands—including luxury names like Dior, YSL, Charlotte Tilbury, and Sol de Janeiro—all in one place.
+              Try before you buy. Take it everywhere. Mini and travel-size beauty from top brands—including luxury names like Dior, YSL, Charlotte Tilbury, and Sol de Janeiro.
             </p>
             <p className="font-sans text-xs tracking-[0.18em] uppercase text-rose">
               Launching soon · Join the waitlist
