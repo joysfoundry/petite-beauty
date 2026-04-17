@@ -36,10 +36,10 @@ const bundles = [
   },
   {
     name: "Travel Essentials Kit",
-    brands: "Shampoo · Moisturizer · Cleanser · Body Lotion",
-    hook: "Pack this and go",
-    price: "$27",
-    originalPrice: "$60",
+    brands: "Shampoo · Cleanser · Body Lotion · Deodorant · Mini Fragrance",
+    hook: "Pack this and go—plane-ready in seconds",
+    price: "$32",
+    originalPrice: "$72",
     tags: ["Under $50"],
   },
 ];
