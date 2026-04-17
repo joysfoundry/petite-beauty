@@ -66,9 +66,10 @@ export const WaitlistProvider = ({ children }: { children: ReactNode }) => {
         setSubmitted(true);
         return;
       }
+      console.warn("waitlist insert failed", error);
       toast({
         title: "Something went wrong",
-        description: error.message,
+        description: "We couldn't add you to the waitlist right now. Please try again later.",
         variant: "destructive",
       });
       return;
