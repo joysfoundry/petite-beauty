@@ -5,6 +5,8 @@ import travel from "@/assets/category-travel.jpg";
 import luxury from "@/assets/category-luxury.jpg";
 import fragrance from "@/assets/category-fragrance.jpg";
 import deodorant from "@/assets/category-deodorant.jpg";
+import tools from "@/assets/category-tools.jpg";
+import { trackClick } from "@/lib/track";
 
 const categories = [
   { name: "Skincare", image: skincare, count: "10+ minis" },
@@ -12,6 +14,7 @@ const categories = [
   { name: "Hair & Body", image: hair, count: "5+ minis" },
   { name: "Fragrance", image: fragrance, count: "Mini scents" },
   { name: "Deodorant", image: deodorant, count: "Travel-size" },
+  { name: "Beauty Tools", image: tools, count: "Mini brushes & more" },
   { name: "Travel Kits", image: travel, count: "Curated sets" },
   { name: "Luxury Minis", image: luxury, count: "Premium picks" },
 ];
@@ -34,6 +37,7 @@ const CategoriesSection = () => {
             <a
               key={cat.name}
               href="#"
+              onClick={() => trackClick("category_click", cat.name)}
               className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-pointer"
             >
               <img

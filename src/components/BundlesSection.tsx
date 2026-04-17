@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useWaitlist } from "@/components/WaitlistDialog";
+import { trackClick } from "@/lib/track";
 
 const bundles = [
   {
@@ -99,7 +100,10 @@ const BundlesSection = () => {
                   variant="hero"
                   size="sm"
                   className="px-6"
-                  onClick={() => open(`bundle_${bundle.name}`)}
+                  onClick={() => {
+                    trackClick("bundle_click", bundle.name, { price: bundle.price });
+                    open(`bundle_${bundle.name}`);
+                  }}
                 >
                   Notify Me
                 </Button>
