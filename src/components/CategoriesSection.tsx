@@ -3,11 +3,15 @@ import makeup from "@/assets/category-makeup.jpg";
 import hair from "@/assets/category-hair.jpg";
 import travel from "@/assets/category-travel.jpg";
 import luxury from "@/assets/category-luxury.jpg";
+import fragrance from "@/assets/category-fragrance.jpg";
+import deodorant from "@/assets/category-deodorant.jpg";
 
 const categories = [
   { name: "Skincare", image: skincare, count: "10+ minis" },
   { name: "Makeup", image: makeup, count: "5+ minis" },
   { name: "Hair & Body", image: hair, count: "5+ minis" },
+  { name: "Fragrance", image: fragrance, count: "Mini scents" },
+  { name: "Deodorant", image: deodorant, count: "Travel-size" },
   { name: "Travel Kits", image: travel, count: "Curated sets" },
   { name: "Luxury Minis", image: luxury, count: "Premium picks" },
 ];
