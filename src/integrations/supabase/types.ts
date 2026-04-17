@@ -14,6 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
+      click_events: {
+        Row: {
+          created_at: string
+          event_type: string
+          id: string
+          item_name: string
+          metadata: Json | null
+        }
+        Insert: {
+          created_at?: string
+          event_type: string
+          id?: string
+          item_name: string
+          metadata?: Json | null
+        }
+        Update: {
+          created_at?: string
+          event_type?: string
+          id?: string
+          item_name?: string
+          metadata?: Json | null
+        }
+        Relationships: []
+      }
       waitlist: {
         Row: {
           created_at: string
