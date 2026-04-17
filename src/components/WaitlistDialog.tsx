@@ -31,10 +31,12 @@ export const WaitlistProvider = ({ children }: { children: ReactNode }) => {
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [alreadyJoined, setAlreadyJoined] = useState(false);
 
   const open = useCallback((src?: string) => {
     setSource(src);
     setSubmitted(false);
+    setAlreadyJoined(false);
     setFirstName("");
     setEmail("");
     setIsOpen(true);
@@ -61,8 +63,9 @@ export const WaitlistProvider = ({ children }: { children: ReactNode }) => {
     setSubmitting(false);
 
     if (error) {
-      // Unique violation = already on the list — treat as success
+      // Unique violation = already on the list
       if (error.code === "23505") {
+        setAlreadyJoined(true);
         setSubmitted(true);
         return;
       }
@@ -84,9 +87,13 @@ export const WaitlistProvider = ({ children }: { children: ReactNode }) => {
         <DialogContent className="sm:max-w-md">
           {submitted ? (
             <div className="text-center py-6 space-y-3 animate-fade-up">
-              <p className="font-serif text-2xl">You're on the list ✨</p>
+              <p className="font-serif text-2xl">
+                {alreadyJoined ? "You're already on the list 💌" : "You're on the list ✨"}
+              </p>
               <p className="font-sans text-sm text-muted-foreground">
-                We'll email you the moment Petite Beauty launches.
+                {alreadyJoined
+                  ? "Looks like this email is already signed up. We'll be in touch the moment Petite Beauty launches."
+                  : "We'll email you the moment Petite Beauty launches."}
               </p>
               <Button variant="hero" className="mt-4" onClick={() => setIsOpen(false)}>
                 Close
