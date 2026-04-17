@@ -3,18 +3,18 @@ import { Plane, FlaskConical, Sparkles } from "lucide-react";
 const features = [
   {
     icon: Plane,
-    title: "Travel-Ready",
-    description: "TSA-approved sizes that fit perfectly in your carry-on.",
+    title: "Travel-Ready Minis",
+    description: "TSA-friendly travel sizes that slip into a Le Chiquito or Nice Mini.",
   },
   {
     icon: FlaskConical,
     title: "Try Before Committing",
-    description: "Test luxury products without the full-size price tag.",
+    description: "Sample Dior Lip Maximizer, YSL Libre, Charlotte Tilbury and more—no full-size risk.",
   },
   {
     icon: Sparkles,
-    title: "Curated from Top Brands",
-    description: "Drunk Elephant, Rare Beauty, Laneige, and more.",
+    title: "Curated Pouch-ception",
+    description: "Mini designer bags paired with curated kits from Rare Beauty, Glossier, Sol de Janeiro.",
   },
 ];
 
@@ -27,8 +27,11 @@ const WhyPetiteSection = () => {
             Why Petite Beauty
           </p>
           <h2 className="text-3xl md:text-4xl tracking-tight">
-            Luxury discovery—not cheap samples
+            Mini designer bags. Curated beauty minis.
           </h2>
+          <p className="text-muted-foreground font-sans mt-3 max-w-xl mx-auto">
+            Luxury discovery—not cheap samples. Think Jacquemus, Prada Re-Edition, and Louis Vuitton Nice Mini, paired with travel-size icons.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
