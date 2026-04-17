@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useWaitlist } from "@/components/WaitlistDialog";
 
 const steps = [
   { number: "01", label: "Pick your routine", desc: "Skincare, makeup, or both?" },
@@ -8,6 +9,7 @@ const steps = [
 ];
 
 const BuildBagSection = () => {
+  const { open } = useWaitlist();
   return (
     <section id="build" className="py-24">
       <div className="container mx-auto px-6">
@@ -32,7 +34,12 @@ const BuildBagSection = () => {
             ))}
           </div>
 
-          <Button variant="hero" size="lg" className="px-12 py-6 mt-8">
+          <Button
+            variant="hero"
+            size="lg"
+            className="px-12 py-6 mt-8"
+            onClick={() => open("build_bag_start")}
+          >
             Start Building
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
