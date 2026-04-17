@@ -20,7 +20,7 @@ const HeroSection = () => {
               <span className="text-rose italic">Beauty</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-md font-sans leading-relaxed">
-              Discover mini and travel-size beauty products from top brands—all in one place.
+              Discover mini and travel-size beauty products from top brands—including luxury names like Dior, YSL, Charlotte Tilbury, and Sol de Janeiro—all in one place.
             </p>
             <p className="font-sans text-xs tracking-[0.18em] uppercase text-rose">
               Launching soon · Join the waitlist
