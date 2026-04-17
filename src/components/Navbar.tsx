@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ShoppingBag } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { useWaitlist } from "@/components/WaitlistDialog";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { open } = useWaitlist();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -20,10 +22,15 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="icon" className="relative">
-            <ShoppingBag className="h-5 w-5" />
+          <Button
+            variant="hero"
+            size="sm"
+            className="hidden sm:inline-flex"
+            onClick={() => open("navbar")}
+          >
+            Join Waitlist
           </Button>
-          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
@@ -35,6 +42,12 @@ const Navbar = () => {
           <a href="#bundles" className="block text-muted-foreground hover:text-foreground">Bundles</a>
           <a href="#build" className="block text-muted-foreground hover:text-foreground">Build Your Bag</a>
           <a href="#brands" className="block text-muted-foreground hover:text-foreground">Brands</a>
+          <button
+            className="block text-rose font-medium"
+            onClick={() => { setIsOpen(false); open("navbar_mobile"); }}
+          >
+            Join Waitlist →
+          </button>
         </div>
       )}
     </nav>
