@@ -1,6 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 
-export type ClickEventType = "bundle_click" | "category_click";
+export type ClickEventType = "bundle_click" | "category_click" | "reel_open";
 
 export const trackClick = async (
   eventType: ClickEventType,
